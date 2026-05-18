@@ -1,0 +1,2109 @@
+/* NAVBAR section */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+
+
+nav {
+  border-radius: 100px;
+  padding: 10px 20px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  margin: 20px auto;
+  width: 100%;
+  box-shadow: 0px 0px 15px 0px gray;
+  background-color: white;
+}
+
+nav img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Modern Underline Animation */
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: grey;
+  transition: width 0.3s ease;
+
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav button {
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+nav button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Mobile View --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    border-radius: 20px;
+    height: auto;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  nav li {
+    padding: 10px 0;
+  }
+
+  nav img {
+    height: 50px;
+  }
+}
+
+/* ... Your existing Desktop CSS ... */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+    z-index: 10;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: white;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .quote-btn.active {
+    display: flex;
+    text-align: center;
+  }
+
+  .quote-btn {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: black;
+    border-top: 1px solid #eee;
+    display: none;
+  }
+
+  nav img {
+    height: 40px;
+  }
+}
+
+
+
+/* 
+--------------------------------------------------------------------------- */
+
+
+/* 1st box section */
+.section1 {
+  justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+}
+
+.img-box img {
+  width: 600px;
+  height: 600px;
+}
+
+.p1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+
+}
+
+.p2 {
+  color: gray;
+  font-size: 20px;
+
+}
+
+.section1 button {
+  background-color: blue;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.section1 button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet and Small Desktop (below 1024px) */
+@media (max-width: 1024px) {
+  .section1 {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .img-box img {
+    width: 450px;
+    /* Scaling down the large image */
+    height: auto;
+  }
+
+  .p1 {
+    font-size: 35px;
+    /* Reducing large heading size */
+  }
+}
+
+/* Mobile Devices (below 768px) */
+@media (max-width: 768px) {
+  .section1 {
+    flex-direction: column;
+    /* Stack image on top of text */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .img-box img {
+    width: 90%;
+    /* Let the image fit the width of the phone */
+    height: auto;
+  }
+
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .p1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .p2 {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Br tags can mess up mobile layouts, hide them if necessary */
+  .text-box br {
+    display: none;
+  }
+}
+
+/* 2nd box section */
+.section2 {
+  justify-content: center;
+  background-color: #F0F0F1;
+}
+
+.msg-box2 {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.img-secound-box {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+
+}
+
+.img1 {
+  width: 900px;
+}
+
+.img2 {
+  width: 500px;
+}
+
+/* Tablet and Small Laptops (under 1200px) */
+@media (max-width: 1200px) {
+  .img1 {
+    width: 60%;
+    /* Switch from fixed px to percentage */
+  }
+
+  .img2 {
+    width: 35%;
+  }
+}
+
+/* Tablets (under 992px) */
+@media (max-width: 992px) {
+  .msg-box2 {
+    flex-direction: column;
+    /* Stack the heading and paragraph */
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .img-secound-box {
+    padding: 20px;
+    gap: 15px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .msg-box2 {
+    text-align: center;
+  }
+
+  .msg h1 {
+    font-size: 28px;
+  }
+
+  .msg p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Remove manual line breaks for better text flow on small screens */
+  .msg p br {
+    display: none;
+  }
+
+  .img-secound-box {
+    flex-direction: column;
+    /* Stack images vertically */
+    align-items: center;
+  }
+
+  .img1,
+  .img2 {
+    width: 100%;
+    /* Full width of the container */
+    height: auto;
+  }
+}
+
+/* 3rd section box */
+
+.section3 {
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  display: flex;
+}
+
+.para3 {
+  line-height: 30px;
+  padding: 40px;
+}
+
+.box3 {
+  padding: 30px;
+}
+
+.sec3-img {
+  width: 800px;
+}
+
+/* Laptops and Large Tablets (under 1200px) */
+@media (max-width: 1200px) {
+  .sec3-img {
+    width: 100%;
+    /* Image will now scale with its container */
+    max-width: 600px;
+    /* Prevents it from getting too huge on medium screens */
+    height: auto;
+  }
+
+  .para3 {
+    padding: 20px;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .section3 {
+    flex-direction: column;
+    /* Stack text and image */
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .para3 {
+    padding: 15px;
+    line-height: 1.6;
+    /* Better readability for long text */
+  }
+
+  .para3 h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .para3 p {
+    font-size: 16px;
+  }
+
+  /* Hide line breaks to allow natural text wrapping on narrow screens */
+  .para3 br {
+    display: none;
+  }
+
+  .box3 {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .sec3-img {
+    width: 100%;
+    max-width: 100%;
+    /* Allows image to fill the phone width */
+  }
+}
+
+/* 4rth section box */
+.section4 {
+  margin-top: 30px;
+  justify-content: center;
+  display: flex;
+  gap: 40px;
+  background-color: #F0F0F1;
+}
+
+.sec4-img {
+  width: 400px;
+  height: 400px;
+}
+
+.para4 {
+  text-align: justify;
+  width: 800px;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 80px;
+}
+
+.box4 {
+  padding: 20px;
+}
+
+
+/* Tablets and Small Laptops (under 1100px) */
+@media (max-width: 1100px) {
+  .para4 {
+    width: 60%;
+    /* Allow text box to shrink */
+    padding: 40px;
+    /* Reduce large padding */
+    font-size: 18px;
+  }
+
+  .sec4-img {
+    width: 300px;
+    /* Scale image down slightly */
+    height: 300px;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .section4 {
+    flex-direction: column;
+    /* Stack image and text */
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .box4 {
+    padding: 10px;
+    order: 1;
+    /* Moves image to top if desired, or keep as 2 to put after text */
+  }
+
+  .sec4-img {
+    width: 250px;
+    /* Small enough for all mobile screens */
+    height: 250px;
+  }
+
+  .para4 {
+    width: 100%;
+    /* Take up full screen width */
+    padding: 20px;
+    text-align: center;
+    /* Justify looks messy on small screens; center is better */
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .para4 h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  /* Remove manual line breaks */
+  .para4 br {
+    display: none;
+  }
+}
+
+/* logo section */
+.star {
+  width: 50px;
+  gap: 20px;
+  height: 50px;
+}
+
+.name {
+  gap: 20px;
+  width: 420px;
+  height: 90px;
+
+}
+
+.logo {
+  margin-top: 30px;
+
+}
+
+.logo-box {
+  justify-content: center;
+  padding: 20px;
+  height: 200px;
+}
+
+
+/* Update your base CSS first to enable alignment */
+/*  */
+
+/* Tablets (under 1024px) */
+@media (max-width: 1024px) {
+  .name {
+    width: 300px;
+    /* Scale down the logo name */
+    height: auto;
+  }
+
+  .star {
+    width: 40px;
+    height: auto;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .logo-box {
+    height: auto;
+    /* Allow the box to grow as items wrap */
+    padding: 10px;
+  }
+
+  .logo {
+    gap: 15px;
+  }
+
+  .name {
+    width: 80%;
+    /* Let the logo take up most of the phone width */
+    max-width: 250px;
+    height: auto;
+  }
+
+  .star {
+    width: 30px;
+    height: auto;
+  }
+}
+
+/* 5th box section */
+
+.msg-box5 {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.msg button {
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.msg button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section5 {
+  justify-content: center;
+}
+
+.produ-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.produ-box {
+  width: 250px;
+  box-shadow: 4px 4px 10px black;
+  border-radius: 10%;
+  height: 300px;
+  text-align: center;
+
+}
+
+.produ-img {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+}
+
+
+/* Update your base CSS to ensure the product container can wrap */
+.product {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Tablets and Laptops (under 1200px) */
+@media (max-width: 1200px) {
+  .msg-box5 {
+    padding: 30px;
+  }
+
+  .produ-box,
+  .produ-img {
+    width: 300px;
+    /* Scaling down images for smaller screens */
+    height: 300px;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .msg-box5 {
+    flex-direction: column;
+    /* Stacks "Our Products" and "Button" */
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .msg-box5 br {
+    display: none;
+    /* Allows description to wrap naturally */
+  }
+
+  .msg-box5 h1 {
+    font-size: 32px;
+  }
+
+  .product {
+    gap: 40px;
+    /* More space between stacked items */
+  }
+
+  .produ-box,
+  .produ-img {
+    width: 90%;
+    /* Boxes take up most of the mobile screen width */
+    max-width: 350px;
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  .produ-img {
+    padding: 10px;
+  }
+}
+
+/* 6th box section */
+
+.section6 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
+  background-color: #F0F0F1;
+}
+
+.sec6-img {
+  width: 450px;
+  height: 450px;
+  margin-top: 50px;
+}
+
+.para6 {
+  text-align: justify;
+  width: 800px;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 80px;
+}
+
+.box6 {
+  padding: 30px;
+}
+
+
+/* Laptops and Small Desktops (under 1200px) */
+@media (max-width: 1200px) {
+  .para6 {
+    width: 50%;
+    /* Let the text box shrink proportionally */
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .sec6-img {
+    width: 350px;
+    /* Scale down the image */
+    height: 350px;
+  }
+}
+
+/* Tablets (under 992px) */
+@media (max-width: 992px) {
+  .section6 {
+    gap: 20px;
+  }
+
+  .para6 {
+    padding: 20px;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .section6 {
+    flex-direction: column;
+    /* Stack image on top, text below */
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .box6 {
+    padding: 10px;
+    order: 1;
+    /* Keeps image at the top */
+  }
+
+  .sec6-img {
+    width: 280px;
+    /* Perfect size for mobile screens */
+    height: 280px;
+    margin-top: 20px;
+  }
+
+  .para6 {
+    width: 100%;
+    /* Take up the full screen width */
+    padding: 20px;
+    text-align: center;
+    /* Justified text looks messy on small screens */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .para6 h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+}
+
+/* 7th box section */
+
+.section7 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+
+}
+
+.sec7-img {
+  width: 600px;
+  height: 550px;
+}
+
+.para7 {
+  text-align: justify;
+  width: 800px;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 80px;
+}
+
+/* .box7 {} */
+
+.para7 button {
+  background-color: blue;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.para7 button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Laptops and Small Desktops (under 1300px) */
+@media (max-width: 1300px) {
+  .para7 {
+    width: 50%;
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .sec7-img {
+    width: 450px;
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+}
+
+/* Tablets (under 992px) */
+@media (max-width: 992px) {
+  .section7 {
+    gap: 20px;
+  }
+
+  .sec7-img {
+    width: 350px;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .section7 {
+    flex-direction: column;
+    /* Stack text and image */
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .para7 {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    /* Better readability on small screens */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .para7 h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .para7 br {
+    display: none;
+    /* Let the text wrap naturally */
+  }
+
+  .sec7-img {
+    width: 90%;
+    /* Scale image to phone width */
+    height: auto;
+  }
+
+  .para7 button {
+    width: 180px;
+    margin-top: 20px;
+  }
+}
+
+/* section box 8,9 */
+
+.section8 {
+
+  padding: 50px;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: #F0F0F1;
+}
+
+.section-89 {
+  display: flex;
+  justify-content: center;
+}
+
+.sec89-img {
+
+  width: 500px;
+  height: 400px;
+}
+
+.para89 {
+  text-align: justify;
+  width: 800px;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 80px;
+}
+
+.box89 {
+  justify-content: center;
+  width: 800px;
+  padding: 80px;
+}
+
+
+/* Laptops and Small Desktops (under 1400px) */
+@media (max-width: 1400px) {
+
+  .para89,
+  .box89 {
+    width: 50%;
+    /* Let them share the width equally */
+    padding: 40px;
+    /* Reduce the large 80px padding */
+  }
+
+  .sec89-img {
+    width: 100%;
+    /* Make image fluid within its box */
+    height: auto;
+    max-width: 450px;
+  }
+}
+
+/* Tablets (under 992px) */
+@media (max-width: 992px) {
+  .section8 {
+    padding: 20px;
+  }
+
+  .para89 {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .section-89 {
+    flex-direction: column;
+    /* Stack image and text */
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* Target the second row to show the image first on mobile */
+  .section-89:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+
+  .para89,
+  .box89 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .para89 {
+    text-align: center;
+    /* Justify is hard to read on narrow screens */
+  }
+
+  .para89 h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .sec89-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+}
+
+/* section box 10 */
+
+.section10 {
+  text-align: center;
+  height: 400px;
+
+}
+
+.card10 {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100px;
+  box-shadow: 2px 2px 10px black;
+
+}
+
+.card-box10 {
+
+  gap: 30px;
+  margin-top: 100px;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+/* section box 11 */
+
+.section11 {
+  position: relative;
+  padding: 20px;
+}
+
+.img-box11 {
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.359);
+  background-image: url(img\ figma/last.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  margin-top: 70px;
+  margin-left: 70px;
+  width: 90%;
+  height: 400px;
+  border-radius: 40px;
+}
+
+.img-letter {
+  margin-left: 200px;
+  margin-top: 70px;
+  color: white;
+}
+
+.img-box11 button {
+  background-color: white;
+  color: black;
+  width: 130px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 20px;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.img-box11 button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet and Small Laptops (under 1024px) */
+@media (max-width: 1024px) {
+  .img-box11 {
+    margin-left: auto;
+    margin-right: auto;
+    /* Centers the banner container */
+    width: 95%;
+  }
+
+  .img-letter {
+    margin-left: 100px;
+    /* Reduces the large gap */
+    font-size: 36px;
+  }
+
+  .img-box11 button {
+    margin-left: 100px;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .section11 {
+    padding: 10px;
+    /* Smaller padding for the outer container */
+  }
+
+  .img-box11 {
+    margin-top: 40px;
+    margin-left: 0;
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-letter {
+    margin-left: 0;
+    margin-top: 40;
+    font-size: 28px;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.2;
+  }
+
+  .img-letter br {
+    display: none;
+  }
+
+  .img-box11 button {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 140px;
+    height: 45px;
+  }
+}
+
+/* --- Footer Section --- */
+footer {
+  background-color: #F0F0F1;
+  color: var(--white);
+  padding: 60px 20px 20px;
+}
+
+.footer-box {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.box12 {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.para12 {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.para1,
+.para2 {
+  min-width: 150px;
+}
+
+.para12 h1 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  position: relative;
+}
+
+/* Small underlined accent */
+.para12 h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 8px;
+}
+
+.footer-link {
+  display: block;
+  color: var(--text-gray);
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+  padding-left: 5px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 30px 0;
+}
+
+.copyright {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------
+                                         2nd page of fingma
+--------------------------------------------------------------------------------------------------------------------- */
+
+.nav1 {
+  background-image: url("img figma/Rectangle 20.png");
+  text-align: center;
+  object-fit: cover;
+  background-size: cover;
+  border: 2px solid black;
+  height: 300px;
+}
+
+.nav1 h1 {
+  font-size: 2rem;
+  color: white;
+  margin-top: 4em;
+}
+
+.nav1 h1:hover {
+  color: gray;
+}
+
+/* Tablet (under 992px) */
+@media (max-width: 992px) {
+  .nav1 {
+    width: 100%;
+    height: auto;
+    /* Change from 100vw to fit within screen */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .nav1 h1 {
+    margin-top: 3em;
+    font-size: 1rem;
+  }
+
+
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .nav1 {
+    flex-direction: column;
+    /* Stack logo, links, and button */
+    border-radius: 20px;
+    /* Large radius looks odd when stacked */
+    height: auto;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+  }
+
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+
+.box1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  gap: 20px;
+}
+
+.tex-tbox {
+  text-align: center;
+  flex: 1;
+  /* Allows text to take up available space */
+}
+
+.imgsize {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* Tablet View (e.g., iPads) */
+@media (max-width: 1024px) {
+  .box1 {
+    padding: 30px;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile View (Smartphones) */
+@media (max-width: 768px) {
+  .box1 {
+    flex-direction: column;
+    /* Stacks the items vertically */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .tex-tbox {
+    order: -1;
+    /* Optional: Moves the text box to the top */
+    margin-bottom: 20px;
+  }
+
+  .imgsize {
+    width: 80%;
+    /* Makes images slightly smaller on mobile */
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* -----------------------------------------------------------------------------------------------------------------
+                                         3nd page of fingma
+--------------------------------------------------------------------------------------------------------------------- */
+
+
+
+.box1 button {
+  background-color: blue;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.box1 button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+  position: relative;
+
+}
+
+.card-sec {
+  color: white;
+  padding: 60px 0;
+  background-color: #9A9DA3;
+}
+
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+
+.card-img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card:hover .card-img-wrapper::after {
+  opacity: 1;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: white;
+}
+
+
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-title {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Disable heavy hover effects on touch devices */
+@media (max-width: 768px) {
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card:hover .card-img-top {
+    transform: none;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+
+:root {
+  --primary-clr: #333;
+  --accent-clr: #007bff;
+  --bg-card: #ffffff;
+  --line-clr: #e0e0e0;
+}
+
+.work-section {
+
+  height: 700px;
+  text-align: center;
+  margin-top: 80px;
+
+}
+
+.absolute1 {
+  margin-left: 300px;
+  margin-bottom: 200px;
+  width: 120px;
+  position: absolute;
+
+}
+
+.absolute2 {
+  margin-left: 1100px;
+  width: 100px;
+  position: absolute;
+}
+
+.work-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary-clr);
+}
+
+.workflow-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* The vertical line in the middle */
+.workflow-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--line-clr);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Number Circle Styling */
+.step-number {
+  grid-column: 2;
+  width: 40px;
+  height: 40px;
+  background: var(--accent-clr);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto;
+  z-index: 2;
+  box-shadow: 0 0 0 5px #f4f7f6;
+}
+
+
+.card2 {
+  background: var(--bg-card);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.card2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
+  color: var(--accent-clr);
+}
+
+.card2 img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.left-card {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.right-card {
+  grid-column: 3;
+  justify-self: start;
+}
+
+/* Animation Delays */
+.step-row:nth-child(1) .card2 {
+  animation-delay: 0.1s;
+}
+
+.step-row:nth-child(2) .card2 {
+  animation-delay: 0.3s;
+}
+
+.step-row:nth-child(3) .card2 {
+  animation-delay: 0.5s;
+}
+
+.step-row:nth-child(4) .card2 {
+  animation-delay: 0.7s;
+}
+
+.step-row:nth-child(5) .card2 {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile View (One Column) */
+@media (max-width: 600px) {
+  .workflow-container {
+    grid-template-columns: 50px 1fr;
+    /* Number | Card */
+  }
+
+  .work-section {
+    height: 100%;
+  }
+
+  .workflow-container::before {
+    left: 25px;
+  }
+
+  .step-number {
+    grid-column: 1;
+  }
+
+  .left-card,
+  .right-card {
+    grid-column: 2;
+    justify-self: start;
+    width: 100%;
+  }
+}
+
+
+/* Handle the absolute decorative images */
+.absolute1,
+.absolute2 {
+  position: absolute;
+  z-index: -1;
+  /* Keep them behind the cards */
+}
+
+/* Hide or shrink decorative images on smaller screens to avoid clutter */
+@media (max-width: 1200px) {
+  .absolute1 {
+    margin-left: 50px;
+    width: 80px;
+  }
+
+  .absolute2 {
+    margin-left: 80%;
+    width: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .absolute1,
+  .absolute2 {
+    display: none;
+  }
+
+  /* Hide them on tablets/phones */
+}
+
+/* --- Mobile View (One Column) --- */
+@media (max-width: 768px) {
+  .work-section {
+    height: auto;
+    /* Allow section to grow with content */
+    padding: 40px 10px;
+  }
+
+  .workflow-container {
+    /* Change to 2 columns: Number and Card */
+    grid-template-columns: 50px 1fr;
+    gap: 30px 10px;
+    /* Vertical gap, Horizontal gap */
+  }
+
+  /* Adjust the vertical line to the left side */
+  .workflow-container::before {
+    left: 25px;
+    transform: none;
+  }
+
+  .step-number {
+    grid-column: 1;
+    margin: 0;
+    /* Align to the left */
+  }
+
+  .card2 {
+    grid-column: 2;
+    justify-self: start;
+    width: 90%;
+    opacity: 1;
+  }
+
+  .left-card,
+  .right-card {
+    grid-column: 2;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .spacer {
+    display: none;
+  }
+}
+
+
+
+
+
+/* 
+----------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* Container styling */
+.container-box {
+  padding: 80px 20px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #686D76;
+}
+
+.container-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Responsive Grid Layout */
+.container-card-box {
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Individual Card Styling */
+.card3 {
+  background: #FFFFFF4D;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+}
+
+/* Hover Effect */
+.card3:hover,
+.card10:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon/Image Styling */
+.card3 img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.card3 h3 {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Mobile Adjustments for Typography */
+@media (max-width: 600px) {
+  .container-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .card3 {
+    padding: 20px;
+  }
+}
+
+
+/* 
+=================================================================================================================== */
+
+/* -----------------------------------------------------------------------------------------------------------------
+                                         3nd page of fingma
+--------------------------------------------------------------------------------------------------------------------- */
+
+.ab-sec1 {
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  gap: 100px
+}
+
+.ab-sec1 button {
+  background-color: blue;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.ab-sec1 button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ab-card1 {
+  line-height: 2;
+  width: 500px;
+}
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .ab-sec1 {
+    gap: 50px;
+    padding: 0 40px;
+  }
+
+  .ab-card1 {
+    width: 100%;
+  }
+
+  .ab-card1 img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .ab-sec1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .ab-card1 {
+    width: 100%;
+  }
+
+  .ab-sec1 h1 {
+    font-size: 26px;
+  }
+
+  .ab-sec1 p {
+    font-size: 15px;
+  }
+
+  .ab-sec1 button {
+    margin: 0 auto;
+  }
+}
+
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .ab-sec1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .ab-sec1 h1 {
+    font-size: 22px;
+  }
+
+  .ab-sec1 p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .ab-sec1 button {
+    width: 130px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+
+/* 
+=================================================================================================================== */
+
+/* -----------------------------------------------------------------------------------------------------------------
+                                         4nd page of fingma
+--------------------------------------------------------------------------------------------------------------------- */
+
+.btn-box-sec {
+  background-color: #F1EFEC;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+
+.contact-info {
+  flex: 1;
+  width: 100%;
+}
+
+.contact-info .title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.contact-item {
+
+  border: 1px solid;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-item img {
+  margin-left: 30px;
+  width: 40px;
+  height: auto;
+}
+
+
+.form-container {
+  flex: 2;
+  min-width: 300px;
+}
+
+input,
+textarea {
+  background-color: #F1EFEC;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  outline: none;
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid #000;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.submit-btn {
+  background: #000;
+  color: #fff;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  float: left;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  .btn-box-sec {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .submit-btn {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* 
+=================================================================================================================== */
+
+/* Container for the entire grid */
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/* Individual Card Styling */
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Makes the bottom card span both columns */
+.card-wide {
+  grid-column: span 2;
+  height: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* The Dark Gradient Overlay for text readability */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.location-info {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.city-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Specific icon style for the pin */
+.pin-icon {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .card-wide {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+}
