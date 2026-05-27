@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+
+<body>
+
+    <nav>
+        <img src="img figma/logo5.png" alt="Logo">
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Ourservice.html">Our services</a></li>
+            <li><a href="About.html">About us</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+        </ul>
+
+        <button class="quote-btn">Get Quote</button>
+    </nav>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const navLinks = document.querySelector('.nav-list');
+        const navButton = document.querySelector('.quote-btn');
+
+        menu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navButton.classList.toggle('active');
+        });
+    </script>
+
+
+    <section class="nav1">
+        <h1>About us </h1>
+    </section>
+
+    <section class="ab-sec1">
+
+        <div class="ab-card1">
+            <img src="img figma/card.png" alt="">
+        </div>
+
+        <div class="ab-card1">
+            <h4 style="letter-spacing: 3px; color:gray;">ABOUT US</h4>
+
+            <h1>Your Strategic Apparel Sourcing Partner</h1>
+
+            <p>At [Company Name], we specialize in providing 360° solutions for apparel sourcing, production, and
+                quality control. With years of experience in the global garment industry, we’ve helped brands — from
+                startups to established retailers — turn ideas into high-quality fashion products delivered on time,
+                every time. <br>As a buying office, we bridge the gap between brands and manufacturers with an expert
+                eye for detail, innovation, and execution.</p>
+
+            <button>Contact Us →</button>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- 
+    ------------------------------------------------------------------------------------------------------------- -->
+
+
+    <section class="container-box">
+        <p style="letter-spacing: 2px; color: white;">YNDE TEX</p>
+        <h1 style=" color: white;">Why Brands Choose Us</h1>
+        <div class="container-card-box">
+
+            <div class="card3">
+                <img src="img figma/i.png" alt="">
+                <h3>Transparent Processes</h3>
+            </div>
+
+            <div class="card3">
+                <img src="img figma/peppole.png" alt="">
+                <h3>Experienced Merchandising Team</h3>
+            </div>
+
+
+            <div class="card3">
+                <img src="img figma/time.png" alt="">
+                <h3>Multi-country Vendor Network</h3>
+            </div>
+
+            <div class="card3">
+                <img src="img figma/file.png" alt="">
+                <h3>Real-time Order Tracking</h3>
+            </div>
+            <div class="card3">
+                <img src="img figma/arrow.png" alt="">
+                <h3>Flexible MOQs</h3>
+            </div>
+            <div class="card3">
+                <img src="img figma/wolrd.png" alt="">
+                <h3>Sustainable Sourcing Options</h3>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- 
+    ------------------------------------------------------------------------------------------------------------- -->
+
+    <section>
+        <img src="img figma/Why Global Brands Trust Us.png" alt="">
+    </section>
+
+
+
+
+    <section class="section11">
+
+        <div class="img-box11">
+            <h1 class="img-letter">Ready to Source with <br>Confidence?</h1>
+            <button>Contact us →</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-box">
+            <div class="footer-content">
+                <!-- Column 1: Logo -->
+                <div class="box12">
+                    <img src="img figma/logo5.png" alt="YNDE TEX" class="footer-logo">
+
+                </div>
+
+                <!-- Column 2 & 3: Links -->
+                <div class="para12">
+                    <div class="para1">
+                        <h1>Pages</h1>
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="Ourservice.html" class="footer-link">Our Service</a>
+                        <a href="About.html" class="footer-link">About Us</a>
+                        <a href="Contact.html" class="footer-link">Contact Us</a>
+                    </div>
+                    <div class="para2">
+                        <h1>Products</h1>
+                        <a href="#" class="footer-link">Infants & Kids</a>
+                        <a href="#" class="footer-link">Womens Collections</a>
+                        <a href="#" class="footer-link">Mens Collections</a>
+                        <a href="#" class="footer-link">Wovens & Jackets</a>
+                        <a href="#" class="footer-link">Leather & Accessories</a>
+                        <a href="#" class="footer-link">Sleepwear & Scrubs</a>
+                        <a href="#" class="footer-link">Home Furnishing</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">&copy; @2025Vizwebsolutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

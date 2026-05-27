@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <nav>
+        <img src="img figma/logo5.png" alt="Logo">
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Ourservice.html">Our services</a></li>
+            <li><a href="About.html">About us</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+        </ul>
+
+        <button class="quote-btn">Get Quote</button>
+    </nav>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const navLinks = document.querySelector('.nav-list');
+        const navButton = document.querySelector('.quote-btn');
+
+        menu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navButton.classList.toggle('active');
+        });
+    </script>
+
+    <section class="nav1">
+        <h1>Contact Us</h1>
+    </section>
+
+    <section class="btn-box-sec">
+        <!-- Contact Info Block -->
+        <div class="contact-info">
+            <p class="title">Get in touch with <b>YNDE Tex</b><br>contact information</p>
+
+            <div class="contact-item">
+                <img src="img figma/Group 1000001776.png" alt="Phone Icon">
+                <p>+91 94800 94598</p>
+            </div>
+
+            <div class="contact-item">
+                <img src="img figma/Frame 6700.png" alt="Email Icon">
+                <p>narayan@yndetex.com</p>
+            </div>
+        </div>
+
+        <!-- Form Block -->
+        <div class="form-container">
+            <form action="#">
+                <div class="input-row">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input type="text" name="firstname">
+                    </div>
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input type="text" name="lastname">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="field">
+                        <label>Phone</label>
+                        <input type="tel" name="phone">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Message</label>
+                    <textarea name="Message" placeholder="Write your message."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <div class="gallery-container">
+
+        <div class="card">
+            <img src="img figma/Bangalore-inner-road_0_1200 1.png" alt="Bengaluru">
+            <div class="overlay">
+                <div class="location-info">Mantri Alpyne, Kengeri</div>
+                <div class="city-name">Bengaluru<br>Karnataka</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img figma/1200px-Amaravathi_statue,_Dharapuram 1.png" alt="Tamil Nadu">
+            <div class="overlay">
+                <div class="location-info">
+                    <span class="pin-icon">📍</span> No.22, Teachers colony, Kumarananthapuram
+                </div>
+                <div class="city-name">Tamil Nadu</div>
+            </div>
+        </div>
+
+        <div class="card card-wide">
+            <img src="img figma/Rectangle 18.jpg" alt="Hong Kong">
+            <div class="overlay">
+                <div class="location-info">Champion Building, 287-291 Des Voeux Road, Sheung Wan</div>
+                <div class="city-name">Sheung Wan, Hong Kong</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-box">
+            <div class="footer-content">
+                <!-- Column 1: Logo -->
+                <div class="box12">
+                    <img src="img figma/logo5.png" alt="YNDE TEX" class="footer-logo">
+
+                </div>
+
+                <!-- Column 2 & 3: Links -->
+                <div class="para12">
+                    <div class="para1">
+                        <h1>Pages</h1>
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="Ourservice.html" class="footer-link">Our Service</a>
+                        <a href="About.html" class="footer-link">About Us</a>
+                        <a href="Contact.html" class="footer-link">Contact Us</a>
+                    </div>
+                    <div class="para2">
+                        <h1>Products</h1>
+                        <a href="#" class="footer-link">Infants & Kids</a>
+                        <a href="#" class="footer-link">Womens Collections</a>
+                        <a href="#" class="footer-link">Mens Collections</a>
+                        <a href="#" class="footer-link">Wovens & Jackets</a>
+                        <a href="#" class="footer-link">Leather & Accessories</a>
+                        <a href="#" class="footer-link">Sleepwear & Scrubs</a>
+                        <a href="#" class="footer-link">Home Furnishing</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">&copy; @2025Vizwebsolutions. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
